@@ -67,6 +67,13 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
+        
+    - name: upx copy
+      id: upx
+      run: |
+        cd openwrt
+        cp /usr/bin/upx staging_dir/host/bin
+        cp /usr/bin/upx-ucl staging_dir/host/bin
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
