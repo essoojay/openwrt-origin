@@ -14,11 +14,12 @@ name: Update Checker
 env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: openwrt-21.02
+  TZ: Asia/Shanghai
 
 on:
   workflow_dispatch:
-#  schedule:
-#    - cron: 0 */18 * * *
+  schedule:
+    - cron: 0 21 * * 5
 
 jobs:
   check:
