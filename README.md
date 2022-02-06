@@ -1,6 +1,10 @@
 
-1. 使用 `git clone https://github.com/coolsnowwolf/lede` 命令下载好源代码，然后 `cd lede` 进入目录
-2. ```bash
+1. 使用 `git clone https://github.com/coolsnowwolf/lede` 命令下载好源代码，然后 `cd lede` 进入目
+2.  ```bash
+    git clone https://github.com/coolsnowwolf/lede
+    cd lede
+    ```
+4. ```bash
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    make menuconfig
