@@ -6,6 +6,10 @@ cd openwrt
 sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+cp /usr/bin/upx staging_dir/host/bin
+cp /usr/bin/upx-ucl staging_dir/host/bin
+./scripts/feeds update -a
+./scripts/feeds install -a
 make menuconfig
 make -j8 download V=s
 make -j1 V=s
