@@ -1,4 +1,4 @@
-
+## 原版openwrt编译方法（x86）：
 ## 1.首次
 ```bash
 git clone https://github.com/openwrt/openwrt -b openwrt-21.02 openwrt
