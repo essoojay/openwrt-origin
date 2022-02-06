@@ -1,4 +1,4 @@
-## 原版openwrt编译方法（x86）：
+## 原版openwrt编译方法（x86）在ubuntu 20.04 ，Debian 10：
 ## 0.安装依赖
 ```bash
 sudo apt-get update
