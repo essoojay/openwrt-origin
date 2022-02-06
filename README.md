@@ -1,4 +1,9 @@
 ## 原版openwrt编译方法（x86）：
+## 0.安装依赖
+```bash
+sudo apt-get update
+sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync build-essential ccache ecj fastjar file g++ gawk gettext git java-propose-classpath libelf-dev libncurses5-dev libncursesw5-dev libssl-dev python python2.7-dev python3 unzip wget python3-distutils python3-setuptools python3-dev rsync subversion swig time xsltproc zlib1g-dev 
+```
 ## 1.首次
 ```bash
 git clone https://github.com/openwrt/openwrt -b openwrt-21.02 openwrt
@@ -14,7 +19,6 @@ make menuconfig
 make -j8 download V=s
 make -j1 V=s
 ```
-
 ## 2.第二次及后续编译
 ```bash
 cd openwrt
@@ -24,7 +28,6 @@ make menuconfig
 make -j8 download
 make -j$(($(nproc) + 1)) V=s
 ```
-
 ## 3.重新配置：
 ```bash
 rm -rf ./tmp && rm -rf .config
@@ -32,28 +35,16 @@ make menuconfig
 make -j8 download
 make -j$(($(nproc) + 1)) V=s
 ```
+## 4.编译完成后输出路径：bin/targets
 
-编译完成后输出路径：bin/targets
-
-
-
-
-# NueXini_Packages
-
-## 1.如何使用NueXini_Packages？ / How to use NueXini_Packages?
-```bash
-cd lede
-sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
-./scripts/feeds update -a && ./scripts/feeds install -a
-```
-## 2.主题
+## 5.主题
 **如果你的openwrt是lede源码，请选择1806的主题插件**
 
 **否则，请选择1907及以上的版本**
 
 **文件名不带版本则默认为1806**
 
-## 3.插件说明
+## 6.插件说明
 ```
 以下是全部：           注：应用后面标记 “ * ” 为最近新添加；标记“ ! ”与其他插件依赖或冲突。
 -----------------------------------------------------------------------------------------
