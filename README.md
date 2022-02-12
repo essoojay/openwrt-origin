@@ -35,8 +35,14 @@ make menuconfig
 make -j8 download
 make -j$(($(nproc) + 1)) V=s
 ```
-## 4.编译完成后输出路径：bin/targets
-
+## 4.固件使用
+```bash
+# For advanced usage, please see /etc/config/v2raya
+uci set v2raya.config.enabled='1'
+uci commit v2raya
+/etc/init.d/v2raya start
+http://openwrt.lan:2017
+```
 ## 5.主题
 **如果你的openwrt是lede源码，请选择1806的主题插件**
 
