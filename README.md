@@ -35,7 +35,7 @@ make menuconfig
 make -j8 download
 make -j$(($(nproc) + 1)) V=s
 ```
-## 4.固件使用
+## 4.v2raya使用前配置
 ```bash
 # For advanced usage, please see /etc/config/v2raya
 uci set v2raya.config.enabled='1'
