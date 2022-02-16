@@ -11,7 +11,8 @@
 #
 
 # Uncomment a feed source
-sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
+ehco 'src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' >> feeds.conf.default
+
 
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
