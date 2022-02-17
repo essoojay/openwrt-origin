@@ -11,7 +11,7 @@
 #
 
 # Uncomment a feed source
-ehco 'src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' >> feeds.conf.default
+echo 'src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' >> feeds.conf.default
 
 
 # Add a feed source
