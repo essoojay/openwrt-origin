@@ -9,7 +9,7 @@
 # Description: Source code update checker
 #
 
-name: openwrt官方源码更新检查
+name: 源码更新检查
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
