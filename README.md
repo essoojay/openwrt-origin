@@ -15,8 +15,8 @@ cp /usr/bin/upx staging_dir/host/bin
 cp /usr/bin/upx-ucl staging_dir/host/bin
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+wget https://raw.githubusercontent.com/lonelysoul/openwrt-origin/main/.config [optional]
 make menuconfig 
-'# wget https://raw.githubusercontent.com/lonelysoul/openwrt-origin/main/.config
 make -j8 download V=s
 make -j1 V=s
 ```
