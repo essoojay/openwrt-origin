@@ -58,7 +58,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone https://github.com/openwrt/openwrt -b openwrt-21.02 openwrt
+        git clone https://github.com/openwrt/openwrt -b openwrt-22.03 openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
