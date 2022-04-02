@@ -6,7 +6,7 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 ```
 ## 1.首次编译
 ```bash
-git clone https://github.com/openwrt/openwrt -b openwrt-222.03 openwrt
+git clone https://github.com/openwrt/openwrt -b openwrt-22.03 openwrt
 cd openwrt
 echo 'src-git LonelySoul https://github.com/lonelysoul/Packages' >>feeds.conf.default
 ./scripts/feeds update -a
