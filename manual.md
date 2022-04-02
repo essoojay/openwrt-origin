@@ -9,6 +9,7 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 git clone https://github.com/openwrt/openwrt -b openwrt-22.03 openwrt
 cd openwrt
 echo 'src-git LonelySoul https://github.com/lonelysoul/Packages' >>feeds.conf.default
+#echo 'src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' >>feeds.conf.default
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 cp /usr/bin/upx staging_dir/host/bin
